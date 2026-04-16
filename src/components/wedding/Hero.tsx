@@ -27,25 +27,35 @@ const Hero = () => {
       ref={sectionRef}
       className="relative min-h-screen w-full overflow-hidden flex items-center justify-center perspective-stage"
     >
-      {/* Background */}
+      {/* 🌌 CINEMATIC BACKGROUND (UPGRADED) */}
       <div
-        className="absolute inset-0 -z-10 animate-slow-zoom"
+        className="absolute inset-0 -z-20 animate-slow-zoom"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 25%, hsl(46 75% 55% / 0.18), transparent 55%), radial-gradient(ellipse at 50% 110%, hsl(173 50% 14% / 0.6), transparent 60%), linear-gradient(180deg, hsl(173 60% 8%), hsl(173 55% 5%))",
+            "radial-gradient(circle at 50% 20%, rgba(245,230,168,0.18), transparent 55%), radial-gradient(circle at 50% 120%, rgba(15,46,42,0.8), transparent 60%), linear-gradient(180deg, #081c19, #04110f)",
         }}
       />
 
-      {/* Top glow */}
+      {/* ✨ LIGHT RAYS (NEW) */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[40vh] -z-10 animate-bloom"
+        className="absolute inset-0 -z-10 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at top, hsl(48 82% 81% / 0.22), transparent 70%)",
+            "radial-gradient(circle at 50% 0%, rgba(245,230,168,0.12), transparent 60%)",
+          animation: "bloom 6s ease-in-out infinite",
         }}
       />
 
-      {/* Mosque */}
+      {/* 🌫️ ATMOSPHERE FOG (NEW DEPTH) */}
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 100%, rgba(0,0,0,0.6), transparent 70%)",
+        }}
+      />
+
+      {/* 🕌 MOSQUE */}
       <div
         className="absolute inset-x-0 bottom-0 -z-[5] flex items-end justify-center pointer-events-none"
         style={{
@@ -53,50 +63,32 @@ const Hero = () => {
           opacity: mosqueOpacity,
           transition:
             "transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.6s cubic-bezier(0.4,0,0.2,1)",
-          transformOrigin: "center bottom",
         }}
       >
         <svg viewBox="0 0 900 360" className="w-full h-auto max-w-[1100px]" fill="none">
           <defs>
             <linearGradient id="mosqueHero" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="hsl(46 65% 52%)" stopOpacity="0.65" />
-              <stop offset="100%" stopColor="hsl(173 60% 6%)" stopOpacity="0.95" />
+              <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="#04110f" stopOpacity="1" />
             </linearGradient>
-            <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
-              <stop offset="0%" stopColor="hsl(48 82% 81%)" stopOpacity="0.7" />
-              <stop offset="100%" stopColor="hsl(48 82% 81%)" stopOpacity="0" />
-            </radialGradient>
           </defs>
-
-          <circle cx="450" cy="80" r="70" fill="url(#moonGlow)" />
-          <circle cx="450" cy="80" r="14" fill="hsl(48 82% 81%)" opacity="0.55" />
 
           <path
             d="M 360 360 L 360 200 Q 360 100 450 70 Q 540 100 540 200 L 540 360 Z"
             fill="url(#mosqueHero)"
           />
 
-          <rect x="447" y="40" width="6" height="34" fill="url(#mosqueHero)" />
-          <circle cx="450" cy="40" r="6" fill="url(#mosqueHero)" />
-
-          <path d="M 200 360 L 200 220 Q 200 170 230 170 Q 260 170 260 220 L 260 360 Z" fill="url(#mosqueHero)" />
-          <rect x="225" y="130" width="10" height="44" fill="url(#mosqueHero)" />
-          <circle cx="230" cy="124" r="6" fill="url(#mosqueHero)" />
-
-          <path d="M 640 360 L 640 220 Q 640 170 670 170 Q 700 170 700 220 L 700 360 Z" fill="url(#mosqueHero)" />
-          <rect x="665" y="130" width="10" height="44" fill="url(#mosqueHero)" />
-          <circle cx="670" cy="124" r="6" fill="url(#mosqueHero)" />
-
-          <rect x="40" y="350" width="820" height="10" fill="url(#mosqueHero)" opacity="0.6" />
+          <rect x="447" y="40" width="6" height="34" fill="#D4AF37" />
+          <circle cx="450" cy="40" r="6" fill="#D4AF37" />
         </svg>
       </div>
 
-      {/* Arch */}
+      {/* 🏛️ ARCH */}
       <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
-        <IslamicArch className="w-[88vw] max-w-[540px] h-auto opacity-70" />
+        <IslamicArch className="w-[90vw] max-w-[560px] opacity-80" />
       </div>
 
-      {/* Content */}
+      {/* ✨ CONTENT */}
       <div
         className="relative z-10 max-w-[640px] mx-auto px-6 text-center flex flex-col items-center gap-8"
         style={{
@@ -116,9 +108,9 @@ const Hero = () => {
           Two souls are united in Nikah
         </p>
 
-        {/* 🔥 PREMIUM NAMES */}
+        {/* 💎 PREMIUM NAMES */}
         <div className="light-sweep">
-          <h1 className="font-display text-5xl md:text-7xl text-gold-gradient text-3d-gold text-glow-gold leading-tight">
+          <h1 className="font-display text-5xl md:text-7xl text-gold-gradient text-3d-gold text-glow-gold">
             Farheen&nbsp;Taj
           </h1>
 
@@ -128,7 +120,7 @@ const Hero = () => {
             <span className="h-px w-16 bg-gradient-to-l from-transparent via-gold/70 to-transparent" />
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl text-gold-gradient text-3d-gold text-glow-gold leading-tight">
+          <h1 className="font-display text-5xl md:text-7xl text-gold-gradient text-3d-gold text-glow-gold">
             Mohammed&nbsp;Sabith
           </h1>
         </div>
