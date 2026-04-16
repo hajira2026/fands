@@ -45,7 +45,7 @@ const Countdown = () => {
           <Cell value={t.s} label="Seconds" />
         </div>
         <p className="mt-10 font-serifalt italic text-ivory/60 text-sm">
-          Until two souls become one — 10th April 2026, 1:30 PM
+          Until two souls become one — 10th May 2026, 1:30 PM
         </p>
       </div>
     </section>

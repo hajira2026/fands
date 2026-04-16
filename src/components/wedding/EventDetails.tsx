@@ -21,7 +21,7 @@ const EventDetails = () => (
         <div className="flex items-center justify-center gap-4 md:gap-6">
           <span className="font-display text-5xl md:text-7xl text-3d-gold" style={{ color: "#E5C870" }}>10</span>
           <span className="text-gold/70 text-2xl">•</span>
-          <span className="font-display text-2xl md:text-3xl text-ivory tracking-[0.3em]">APRIL</span>
+          <span className="font-display text-2xl md:text-3xl text-ivory tracking-[0.3em]">MAY</span>
           <span className="text-gold/70 text-2xl">•</span>
           <span className="font-display text-5xl md:text-7xl text-3d-gold" style={{ color: "#E5C870" }}>26</span>
         </div>

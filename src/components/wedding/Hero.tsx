@@ -80,7 +80,7 @@ const Hero = () => {
         </h1>
 
         <p className="mt-6 text-[10px] tracking-[0.4em] text-white/50 uppercase">
-          05 • April • 2026
+          10 • May • 2026
         </p>
       </div>
     </section>
