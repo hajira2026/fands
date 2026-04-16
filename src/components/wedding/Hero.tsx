@@ -48,7 +48,7 @@ const Hero = () => {
           style={{ animation: "fade-up-slow 2.4s cubic-bezier(0.4,0,0.2,1) 3.4s forwards" }}
         >
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl text-gold-gradient text-glow-gold leading-[1.15]">
-            Farheem&nbsp;Taj
+            Farheen&nbsp;Taj
           </h1>
           <div className="my-3 md:my-4 flex items-center justify-center gap-4">
             <span className="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-gold/70" />
