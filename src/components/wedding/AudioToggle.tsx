@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
-import nikahTheme from "/audio/nikah-theme.mp3?url";
 
 /**
  * Cinematic background score — user-uploaded saxophone instrumental.
  * - Auto-starts on first user interaction (browsers block silent autoplay)
  * - Floating glass pill with play/pause + volume slider + mute
  */
-const SRC = nikahTheme;
+const SRC = "/audio/nikah-theme.mp3";
 
 const AudioToggle = () => {
   const ref = useRef<HTMLAudioElement>(null);
