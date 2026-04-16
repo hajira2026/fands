@@ -25,7 +25,7 @@ const Couple = () => (
       </div>
 
       <div className="grid md:grid-cols-[1fr_auto_1fr] gap-12 md:gap-8 items-center">
-        <Person name="Farheem Taj" role="The Bride" parent="D/o Shafi Khan" place="Mysore" />
+        <Person name="Farheen Taj" role="The Bride" parent="D/o Shafi Khan" place="Mysore" />
         <div className="reveal flex flex-col items-center justify-center gap-3">
           <span className="text-gold-glow text-3xl text-glow-gold">✦</span>
           <span className="hidden md:block w-px h-32 bg-gradient-to-b from-transparent via-gold/60 to-transparent" />

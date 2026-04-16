@@ -13,7 +13,7 @@ const Footer = () => (
       “And He placed between you affection and mercy.” — Qur’an 30:21
     </p>
     <p className="mt-10 font-display text-[10px] tracking-[0.5em] text-ivory/30 uppercase">
-      Farheem &amp; Sabith · 2026
+      Farheen &amp; Sabith · 2026
     </p>
   </footer>
 );

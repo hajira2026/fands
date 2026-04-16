@@ -64,7 +64,7 @@ const Hero = () => {
           className="font-display text-[10px] tracking-[0.5em] text-ivory/50 uppercase mt-6 opacity-0"
           style={{ animation: "fade-up-slow 2s cubic-bezier(0.4,0,0.2,1) 4.4s forwards" }}
         >
-          05 · April · 2026
+          10 · April · 2026
         </p>
       </div>
 
