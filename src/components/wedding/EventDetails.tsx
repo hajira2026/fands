@@ -17,13 +17,13 @@ const EventDetails = () => (
 
         {/* Date hero */}
         <div className="flex items-center justify-center gap-4 md:gap-6">
-          <span className="font-display text-5xl md:text-7xl text-gold-gradient text-glow-gold">05</span>
+          <span className="font-display text-5xl md:text-7xl text-gold-gradient text-glow-gold">10</span>
           <span className="text-gold/70 text-2xl">•</span>
           <span className="font-display text-2xl md:text-3xl text-ivory tracking-[0.3em]">APRIL</span>
           <span className="text-gold/70 text-2xl">•</span>
           <span className="font-display text-5xl md:text-7xl text-gold-gradient text-glow-gold">26</span>
         </div>
-        <p className="mt-2 font-display text-[10px] tracking-[0.4em] text-ivory/50">SUNDAY · 2026</p>
+        <p className="mt-2 font-display text-[10px] tracking-[0.4em] text-ivory/50">FRIDAY · 2026</p>
 
         <GoldDivider className="my-10" />
 
