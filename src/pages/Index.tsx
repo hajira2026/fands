@@ -1,16 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import AtmosphereLayer from "@/components/wedding/AtmosphereLayer";
+import CameraStage from "@/components/wedding/CameraStage";
+import Hero from "@/components/wedding/Hero";
+import Invitation from "@/components/wedding/Invitation";
+import Couple from "@/components/wedding/Couple";
+import Story from "@/components/wedding/Story";
+import EventDetails from "@/components/wedding/EventDetails";
+import Venue from "@/components/wedding/Venue";
+import Blessing from "@/components/wedding/Blessing";
+import Footer from "@/components/wedding/Footer";
+import AudioToggle from "@/components/wedding/AudioToggle";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useScrollReveal();
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="relative min-h-screen w-full">
+      <AtmosphereLayer />
+      <AudioToggle />
+      <div className="relative z-10">
+        <CameraStage>
+          <Hero />
+          <Invitation />
+          <Couple />
+          <Story />
+          <EventDetails />
+          <Venue />
+          <Blessing />
+          <Footer />
+        </CameraStage>
+      </div>
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
