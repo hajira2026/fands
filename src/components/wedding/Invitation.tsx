@@ -1,44 +1,33 @@
-import GoldDivider from "./GoldDivider";
 import FloralCorners from "./FloralCorners";
+import GoldDivider from "./GoldDivider";
 
 const Invitation = () => (
-  <section className="relative py-[100px] md:py-[140px] px-5 flex justify-center">
-    {/* 🌟 SOFT BACKGROUND GLOW */}
-    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(245,230,168,0.08),transparent_70%)]" />
+  <section className="relative flex justify-center px-5 py-[88px] sm:px-6 md:py-[124px]">
+    <div className="section-glow absolute inset-0 -z-10" />
 
-    <div className="reveal max-w-[520px] w-full relative">
-      <FloralCorners size={120} />
+    <div className="reveal relative w-full max-w-3xl">
+      <FloralCorners size={112} />
 
-      <div className="glass-card rounded-sm px-6 py-10 md:px-12 md:py-14 text-center light-sweep relative">
-
-        {/* 🔥 TITLE */}
-        <p className="font-display text-[9px] md:text-xs tracking-[0.4em] text-gold/90 uppercase mb-6">
+      <div className="glass-card premium-frame light-sweep rounded-[2rem] px-6 py-10 text-center sm:px-10 sm:py-12 md:px-14">
+        <p className="text-[0.64rem] uppercase tracking-[0.46em] text-[#ead4a2]/78 sm:text-[0.68rem]">
           The Honour of Your Presence
         </p>
 
-        <GoldDivider className="mb-8" />
+        <GoldDivider className="my-7" />
 
-        {/* 💬 TEXT */}
-        <p className="italic text-white/85 text-sm md:text-lg leading-relaxed">
-          Together with their families,
-          <br />
-          they request the honour of your presence
-          <br />
-          to witness the sacred
+        <p className="font-romantic mx-auto max-w-2xl text-xl italic leading-relaxed text-[#f8efe1]/84 sm:text-[1.45rem]">
+          Together with their families, they request the honour of your presence to witness the sacred Nikah and share in an evening of love, dua, and celebration.
         </p>
 
-        {/* 💎 MAIN HEADING (FIXED GOLD) */}
-        <h2 className="mt-6 font-display text-2xl sm:text-3xl md:text-5xl text-gold-gradient text-3d-gold text-glow-gold">
+        <h2 className="font-display text-gold-gradient mt-7 text-3xl text-3d-gold sm:text-4xl md:text-5xl">
           Nikah Ceremony
         </h2>
 
-        <GoldDivider className="mt-8" />
+        <GoldDivider className="mt-7" />
 
-        {/* 📍 LOCATION */}
-        <p className="mt-6 font-display text-[9px] tracking-[0.35em] text-white/60 uppercase">
-          Mysore · Virajpet
+        <p className="mt-6 text-[0.64rem] uppercase tracking-[0.4em] text-[#f1dfbf]/64 sm:text-[0.7rem]">
+          Mysore and Virajpet united in joy
         </p>
-
       </div>
     </div>
   </section>
