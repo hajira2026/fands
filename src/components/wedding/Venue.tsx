@@ -33,7 +33,7 @@ const Venue = () => (
       <p className="font-display text-[10px] md:text-xs tracking-[0.5em] text-gold/90 uppercase">The Venue</p>
       <GoldDivider className="my-8" />
 
-      <h2 className="font-display text-3xl md:text-5xl text-gold-gradient text-glow-gold">SK Blue Heaven</h2>
+      <h2 className="font-display text-3xl md:text-5xl text-3d-gold" style={{ color: "#E5C870" }}>SK Blue Heaven</h2>
       <p className="mt-6 font-serifalt italic text-ivory/75 leading-relaxed max-w-[520px] mx-auto">
         A serene gathering place where families and loved ones will witness the sacred union — under one sky, one prayer.
       </p>

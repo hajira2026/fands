@@ -10,7 +10,7 @@ const Person = ({ name, role, parent, place }: { name: string; role: string; par
         <span className="font-display text-5xl text-gold-gradient">{name.charAt(0)}</span>
       </div>
     </div>
-    <h3 className="font-display text-2xl md:text-3xl text-gold-gradient leading-tight">{name}</h3>
+    <h3 className="font-display text-2xl md:text-3xl text-3d-gold leading-tight" style={{ color: "#E5C870" }}>{name}</h3>
     <p className="mt-3 font-serifalt italic text-ivory/70 text-sm">{parent}</p>
     <p className="mt-1 font-display text-[10px] tracking-[0.4em] text-ivory/50 uppercase">{place}</p>
   </div>

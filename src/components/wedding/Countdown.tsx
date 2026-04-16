@@ -15,7 +15,7 @@ const calc = () => {
 const Cell = ({ value, label }: { value: number; label: string }) => (
   <div className="flex flex-col items-center min-w-[60px] md:min-w-[90px]">
     <div className="glass-card rounded-sm px-3 py-4 md:px-6 md:py-6 light-sweep w-full">
-      <div className="font-display text-3xl md:text-5xl text-gold-gradient text-glow-gold leading-none tabular-nums">
+      <div className="font-display text-3xl md:text-5xl text-3d-gold leading-none tabular-nums" style={{ color: "#E5C870" }}>
         {String(value).padStart(2, "0")}
       </div>
     </div>
