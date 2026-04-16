@@ -3,8 +3,8 @@
  * positioned at all 4 corners of a card. Inspired by traditional Indian
  * Muslim wedding invitations.
  */
-const Spray = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 200 200" className={className} xmlns="http://www.w3.org/2000/svg" aria-hidden>
+const Spray = ({ className = "", style }: { className?: string; style?: React.CSSProperties }) => (
+  <svg viewBox="0 0 200 200" className={className} style={style} xmlns="http://www.w3.org/2000/svg" aria-hidden>
     {/* gold vines */}
     <g fill="none" stroke="#B8862A" strokeWidth="1.4" strokeLinecap="round">
       <path d="M10 10 Q60 14 100 60 Q130 95 170 110" opacity="0.9" />
@@ -54,23 +54,10 @@ const Spray = ({ className = "" }: { className?: string }) => (
 
 const FloralCorners = () => (
   <>
-    {/* top-left (default orientation) */}
-    <Spray className="corner" style={{ top: -40, left: -40 } as React.CSSProperties} />
-    {/* top-right (mirror X) */}
-    <Spray
-      className="corner"
-      style={{ top: -40, right: -40, transform: "scaleX(-1)" } as React.CSSProperties}
-    />
-    {/* bottom-left (mirror Y) */}
-    <Spray
-      className="corner"
-      style={{ bottom: -40, left: -40, transform: "scaleY(-1)" } as React.CSSProperties}
-    />
-    {/* bottom-right (mirror both) */}
-    <Spray
-      className="corner"
-      style={{ bottom: -40, right: -40, transform: "scale(-1,-1)" } as React.CSSProperties}
-    />
+    <Spray className="corner" style={{ top: -40, left: -40 }} />
+    <Spray className="corner" style={{ top: -40, right: -40, transform: "scaleX(-1)" }} />
+    <Spray className="corner" style={{ bottom: -40, left: -40, transform: "scaleY(-1)" }} />
+    <Spray className="corner" style={{ bottom: -40, right: -40, transform: "scale(-1,-1)" }} />
   </>
 );
 
