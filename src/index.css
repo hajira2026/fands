@@ -77,6 +77,9 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .text-gold-soft {
+  color: #F5E6A8;
+}
   .text-glow-gold {
     text-shadow:
       0 0 20px rgba(212,175,55,0.4),
