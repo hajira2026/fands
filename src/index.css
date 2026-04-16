@@ -267,3 +267,84 @@
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes seal-pop {
+  0%   { opacity: 0; transform: scale(0.6) rotate(-15deg); }
+  60%  { opacity: 1; transform: scale(1.08) rotate(-6deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-8deg); }
+}
+
+@layer utilities {
+  /* Cream parchment card — for traditional invitation aesthetic */
+  .parchment-card {
+    background:
+      radial-gradient(ellipse at top, hsl(40 35% 96%) 0%, hsl(36 28% 89%) 70%, hsl(34 25% 82%) 100%);
+    color: hsl(20 30% 20%);
+    border: 1px solid hsl(46 50% 60% / 0.6);
+    box-shadow:
+      inset 0 0 60px hsl(40 40% 75% / 0.4),
+      inset 0 0 0 1px hsl(46 70% 55% / 0.3),
+      0 0 80px hsl(46 65% 52% / 0.3),
+      0 40px 90px -20px hsl(173 60% 4% / 0.8);
+    position: relative;
+  }
+  .parchment-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* Embossed gold for couple names on parchment */
+  .gold-emboss {
+    background: linear-gradient(180deg, #C8951F 0%, #F5E6A8 45%, #B8862A 55%, #8C5E15 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    filter: drop-shadow(0 1px 0 hsl(40 30% 30% / 0.15));
+  }
+
+  .floral-corners { position: relative; }
+  .floral-corners > .corner {
+    position: absolute;
+    width: 120px; height: 120px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    filter: drop-shadow(0 0 4px hsl(46 70% 55% / 0.45));
+  }
+  @media (min-width: 768px) {
+    .floral-corners > .corner { width: 170px; height: 170px; }
+  }
+
+  .arch-minarets::after {
+    content: "";
+    position: absolute;
+    bottom: 14px; left: 50%;
+    transform: translateX(-50%);
+    width: 78%; height: 56px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80' fill='%23B8862A'%3E%3Cg opacity='0.6'%3E%3Cpath d='M30 80 L30 38 Q30 28 38 28 Q46 28 46 38 L46 80 Z'/%3E%3Ccircle cx='38' cy='22' r='4'/%3E%3Cpath d='M55 80 L55 50 Q55 42 62 42 Q69 42 69 50 L69 80 Z'/%3E%3Ccircle cx='62' cy='38' r='3'/%3E%3Cpath d='M331 80 L331 50 Q331 42 338 42 Q345 42 345 50 L345 80 Z'/%3E%3Ccircle cx='338' cy='38' r='3'/%3E%3Cpath d='M354 80 L354 38 Q354 28 362 28 Q370 28 370 38 L370 80 Z'/%3E%3Ccircle cx='362' cy='22' r='4'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .wax-seal {
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #E5C870 0%, #B8862A 40%, #6B4715 100%);
+    box-shadow:
+      inset -4px -6px 12px hsl(20 50% 15% / 0.6),
+      inset 4px 6px 10px hsl(48 90% 85% / 0.4),
+      0 8px 24px hsl(20 50% 10% / 0.6);
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(-8deg);
+    animation: seal-pop 1.4s var(--ease-cinema) 4.6s both;
+  }
+}
