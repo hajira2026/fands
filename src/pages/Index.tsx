@@ -12,12 +12,14 @@ import Venue from "@/components/wedding/Venue";
 import Blessing from "@/components/wedding/Blessing";
 import Footer from "@/components/wedding/Footer";
 import AudioToggle from "@/components/wedding/AudioToggle";
+import CinematicIntro from "@/components/wedding/CinematicIntro";
 
 const Index = () => {
   useScrollReveal();
 
   return (
     <main className="relative min-h-screen w-full">
+      <CinematicIntro />
       {/* Layered background: 3D scene → atmosphere particles → content */}
       <div className="fixed inset-0 z-0">
         <Scene3D />
