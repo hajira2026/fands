@@ -179,6 +179,48 @@
     perspective: 1600px;
     transform-style: preserve-3d;
   }
+
+  /* Mehndi / henna ornamental border using SVG paisley + vines.
+     Wrap any card with .mehndi-frame to get layered gold ornaments at the corners. */
+  .mehndi-frame {
+    position: relative;
+  }
+  .mehndi-frame::before,
+  .mehndi-frame::after {
+    content: "";
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px hsl(46 65% 52% / 0.5));
+  }
+  .mehndi-frame::before {
+    top: -14px; left: -14px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23D4AF37' stroke-width='1.1'%3E%3Cpath d='M2 50 Q2 2 50 2'/%3E%3Cpath d='M10 50 Q10 10 50 10'/%3E%3Cpath d='M18 28 q6 -10 18 -10 q-2 12 -12 16 q-10 -2 -6 -6 z'/%3E%3Ccircle cx='14' cy='14' r='2.2' fill='%23F5E6A8'/%3E%3Cpath d='M22 22 q8 -2 14 4'/%3E%3Cpath d='M30 14 q-2 6 4 12'/%3E%3Cpath d='M44 6 q-2 6 4 10' /%3E%3C/svg%3E");
+  }
+  .mehndi-frame::after {
+    bottom: -14px; right: -14px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23D4AF37' stroke-width='1.1'%3E%3Cpath d='M98 50 Q98 98 50 98'/%3E%3Cpath d='M90 50 Q90 90 50 90'/%3E%3Cpath d='M82 72 q-6 10 -18 10 q2 -12 12 -16 q10 2 6 6 z'/%3E%3Ccircle cx='86' cy='86' r='2.2' fill='%23F5E6A8'/%3E%3Cpath d='M78 78 q-8 2 -14 -4'/%3E%3Cpath d='M70 86 q2 -6 -4 -12'/%3E%3Cpath d='M56 94 q2 -6 -4 -10'/%3E%3C/svg%3E");
+  }
+
+  /* Full mehndi side vines */
+  .mehndi-vines::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid hsl(46 65% 52% / 0.25);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .slider-gold [role="slider"] {
+    background: hsl(var(--gold));
+    border-color: hsl(var(--gold-glow));
+    box-shadow: 0 0 12px hsl(46 65% 52% / 0.6);
+  }
 }
 
 @keyframes shimmer {
