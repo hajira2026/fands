@@ -1,11 +1,13 @@
 import { Calendar, Clock, MapPin } from "lucide-react";
 import GoldDivider from "./GoldDivider";
+import FloralCorners from "./FloralCorners";
 
 const EventDetails = () => (
   <section className="relative py-[120px] md:py-[160px] px-6 flex justify-center">
-    <div className="reveal max-w-[600px] w-full perspective-stage">
+    <div className="reveal max-w-[600px] w-full perspective-stage relative">
+      <FloralCorners size={140} />
       <div
-        className="glass-card mehndi-frame mehndi-vines rounded-sm p-8 md:p-14 text-center light-sweep transition-transform duration-700 hover:scale-[1.02]"
+        className="glass-card rounded-sm p-8 md:p-14 text-center light-sweep transition-transform duration-700 hover:scale-[1.02] relative"
         style={{ boxShadow: "0 0 80px hsl(46 65% 52% / 0.18), 0 30px 80px -20px hsl(173 60% 4% / 0.7)" }}
       >
         <p className="font-display text-[10px] md:text-xs tracking-[0.5em] text-gold/90 uppercase mb-2">
@@ -17,11 +19,11 @@ const EventDetails = () => (
 
         {/* Date hero */}
         <div className="flex items-center justify-center gap-4 md:gap-6">
-          <span className="font-display text-5xl md:text-7xl text-gold-gradient text-glow-gold">10</span>
+          <span className="font-display text-5xl md:text-7xl text-3d-gold" style={{ color: "#E5C870" }}>10</span>
           <span className="text-gold/70 text-2xl">•</span>
           <span className="font-display text-2xl md:text-3xl text-ivory tracking-[0.3em]">APRIL</span>
           <span className="text-gold/70 text-2xl">•</span>
-          <span className="font-display text-5xl md:text-7xl text-gold-gradient text-glow-gold">26</span>
+          <span className="font-display text-5xl md:text-7xl text-3d-gold" style={{ color: "#E5C870" }}>26</span>
         </div>
         <p className="mt-2 font-display text-[10px] tracking-[0.4em] text-ivory/50">FRIDAY · 2026</p>
 
