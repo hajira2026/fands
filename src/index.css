@@ -64,7 +64,9 @@
     font-family: 'Cinzel', serif;
     letter-spacing: 0.12em;
   }
-
+.text-soft-gold {
+  color: #F5E6A8;
+}
   .font-arabic {
     font-family: 'Amiri', serif;
   }

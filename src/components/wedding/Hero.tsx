@@ -1,85 +1,47 @@
-import { useEffect, useRef, useState } from "react";
 import IslamicArch from "./IslamicArch";
 
 const Hero = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => {
-      const el = sectionRef.current;
-      if (!el) return;
-      const h = el.offsetHeight;
-      const y = Math.min(Math.max(window.scrollY, 0), h);
-      setProgress(y / h);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <section
-      ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      {/* 🌟 LIGHT BACKGROUND (FIXED) */}
-      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-[#0F2E2A] via-[#123c35] to-[#081c19]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-      {/* ✨ GLOW CENTER */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(245,230,168,0.15),transparent_60%)]" />
+      {/* 💎 SOFT GOLD BACKGROUND */}
+      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-[#123c35] via-[#0F2E2A] to-[#081c19]" />
 
-      {/* 🌫️ SOFT DEPTH LAYER */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,rgba(0,0,0,0.4),transparent_70%)]" />
+      {/* ✨ CENTER LIGHT */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(245,230,168,0.2),transparent_60%)]" />
 
-      {/* ✨ FLOATING PARTICLES */}
-      <div className="absolute inset-0 -z-10">
-        {[...Array(20)].map((_, i) => (
-          <span
-            key={i}
-            className="absolute w-[2px] h-[2px] bg-[#F5E6A8] rounded-full opacity-70"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `float-dust ${6 + Math.random() * 6}s linear infinite`,
-            }}
-          />
-        ))}
+      {/* 🕌 DARK MOSQUE EFFECT */}
+      <div className="absolute bottom-0 w-full opacity-30 scale-110">
+        <IslamicArch className="w-full max-w-[500px] mx-auto" />
       </div>
 
-      {/* 🏛️ ARCH */}
-      <IslamicArch className="absolute bottom-0 opacity-60 w-[90%] max-w-[500px]" />
-
       {/* 💎 CONTENT */}
-      <div className="relative z-10 text-center px-6 max-w-[90%]">
-        <p className="font-arabic text-xl text-[#F5E6A8] mb-3">
+      <div className="text-center px-6 z-10">
+
+        <p className="font-arabic text-lg text-[#F5E6A8] mb-2">
           بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
         </p>
 
-        <p className="text-[10px] tracking-[0.4em] text-white/70 uppercase mb-3">
+        <p className="text-[10px] tracking-[0.4em] text-white/70 uppercase mb-2">
           With the blessings of Allah
         </p>
 
-        <p className="italic text-sm text-white/80 mb-6">
+        <p className="italic text-sm text-white/80 mb-5">
           Two souls are united in Nikah
         </p>
 
-        {/* 💎 NAMES (FIXED MOBILE) */}
-        <h1 className="font-display text-3xl sm:text-5xl text-gold-gradient text-3d-gold text-glow-gold leading-snug">
+        {/* 💎 BIG NAMES */}
+        <h1 className="text-4xl md:text-6xl text-gold-gradient text-glow-gold font-display">
           Farheen Taj
         </h1>
 
-        <div className="my-4 flex justify-center items-center gap-3">
-          <span className="w-10 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
-          <span className="text-gold-glow text-lg">✦</span>
-          <span className="w-10 h-px bg-gradient-to-l from-transparent via-gold/70 to-transparent" />
-        </div>
+        <div className="my-3 text-gold-glow">✦</div>
 
-        <h1 className="font-display text-3xl sm:text-5xl text-gold-gradient text-3d-gold text-glow-gold leading-snug">
+        <h1 className="text-4xl md:text-6xl text-gold-gradient text-glow-gold font-display">
           Mohammed Sabith
         </h1>
 
-        <p className="mt-6 text-[10px] tracking-[0.4em] text-white/50 uppercase">
+        <p className="mt-5 text-[10px] tracking-[0.4em] text-white/50 uppercase">
           10 • May • 2026
         </p>
       </div>

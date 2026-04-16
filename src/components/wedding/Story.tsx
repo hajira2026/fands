@@ -14,7 +14,7 @@ const Story = () => (
         <GoldDivider className="mt-6" />
       </div>
 
-      <div className="relative space-y-20">
+      <div className="relative space-y-16 text-center">
         {/* spine */}
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/40 to-transparent" />
 
