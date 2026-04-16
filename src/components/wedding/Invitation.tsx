@@ -3,7 +3,7 @@ import GoldDivider from "./GoldDivider";
 const Invitation = () => (
   <section className="relative py-[120px] md:py-[160px] px-6 flex justify-center">
     <div className="reveal max-w-[600px] w-full">
-      <div className="glass-card rounded-sm p-8 md:p-14 text-center light-sweep">
+      <div className="glass-card mehndi-frame mehndi-vines rounded-sm p-8 md:p-14 text-center light-sweep">
         <p className="font-display text-[10px] md:text-xs tracking-[0.5em] text-gold/90 uppercase mb-8">
           The Honour of Your Presence
         </p>

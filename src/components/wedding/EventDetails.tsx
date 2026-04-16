@@ -5,7 +5,7 @@ const EventDetails = () => (
   <section className="relative py-[120px] md:py-[160px] px-6 flex justify-center">
     <div className="reveal max-w-[600px] w-full perspective-stage">
       <div
-        className="glass-card rounded-sm p-8 md:p-14 text-center light-sweep transition-transform duration-700 hover:scale-[1.02]"
+        className="glass-card mehndi-frame mehndi-vines rounded-sm p-8 md:p-14 text-center light-sweep transition-transform duration-700 hover:scale-[1.02]"
         style={{ boxShadow: "0 0 80px hsl(46 65% 52% / 0.18), 0 30px 80px -20px hsl(173 60% 4% / 0.7)" }}
       >
         <p className="font-display text-[10px] md:text-xs tracking-[0.5em] text-gold/90 uppercase mb-2">
