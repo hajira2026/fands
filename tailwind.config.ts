@@ -16,6 +16,8 @@ export default {
         serifalt: ['"Playfair Display"', "serif"],
         body: ['"Poppins"', "sans-serif"],
         arabic: ['"Amiri"', "serif"],
+        script: ['"Great Vibes"', "cursive"],
+        cormorant: ['"Cormorant Garamond"', "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
