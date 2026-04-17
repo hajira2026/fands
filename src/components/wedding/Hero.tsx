@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="hero-ambient-ribbon absolute -right-[18%] bottom-[18%] -z-20 h-44 w-[34rem] rotate-[8deg]" />
 
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="hero-arch-travel absolute inset-0 flex items-center justify-center">
+        <div className="hero-arch-breathe absolute inset-0 flex items-center justify-center">
           <div className="hero-arch-shell w-[94vw] max-w-[72rem] px-0 sm:px-4">
             <IslamicArch className="w-full" />
           </div>
@@ -56,10 +56,6 @@ const Hero = () => {
             style={{ textShadow: `0 0 ${16 + scrollProgress * 18}px rgba(245, 229, 184, ${subGlow})` }}
           >
             With the blessings of Allah
-          </p>
-
-          <p className="font-romantic mx-auto mt-5 max-w-2xl text-lg italic leading-relaxed text-[#f8efe1] sm:text-[1.45rem]">
-            An evening of sacred vows, royal elegance, and a love story wrapped in dua and barakah.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4 sm:gap-5">
@@ -108,14 +104,8 @@ const Hero = () => {
               View Ceremony
             </a>
           </div>
-
-          <p className="mt-6 text-[0.66rem] uppercase tracking-[0.34em] text-[#f1dfbf]/65 sm:text-xs">
-            A royal nikah invitation with romance, light, and graceful motion
-          </p>
         </div>
       </div>
-
-      <div className="hero-bottom-blend absolute inset-x-0 bottom-[-1px] z-10 h-40 sm:h-48" />
     </section>
   );
 };

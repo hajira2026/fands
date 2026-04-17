@@ -30,7 +30,7 @@ const EventDetails = () => (
 
           <div className="mx-auto flex w-full max-w-[9rem] flex-col items-center justify-center rounded-full border border-[#ead18e]/20 bg-[#f7ebc7]/[0.06] px-4 py-4">
             <p className="font-display text-lg tracking-[0.34em] text-[#f5e5b8] sm:text-xl">MAY</p>
-            <p className="mt-1 text-[0.6rem] uppercase tracking-[0.35em] text-[#f1dfbf]/60">Friday</p>
+            <p className="mt-1 text-[0.6rem] uppercase tracking-[0.35em] text-[#f1dfbf]/60">Sunday</p>
           </div>
 
           <div className="text-center sm:text-left">
