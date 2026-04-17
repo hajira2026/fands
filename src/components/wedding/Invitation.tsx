@@ -2,8 +2,9 @@ import FloralCorners from "./FloralCorners";
 import GoldDivider from "./GoldDivider";
 
 const Invitation = () => (
-  <section className="relative flex justify-center px-5 py-[88px] sm:px-6 md:py-[124px]">
+  <section id="invitation" className="invitation-entry relative z-10 flex justify-center px-5 py-[88px] sm:px-6 md:py-[124px]">
     <div className="section-glow absolute inset-0 -z-10" />
+    <div className="invitation-top-mist absolute inset-x-0 top-[-7rem] -z-10 h-40 sm:top-[-8rem] sm:h-52" />
 
     <div className="reveal relative w-full max-w-3xl">
       <FloralCorners size={112} />

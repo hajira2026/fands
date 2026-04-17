@@ -3,7 +3,7 @@ import FloralCorners from "./FloralCorners";
 import GoldDivider from "./GoldDivider";
 
 const EventDetails = () => (
-  <section className="relative flex justify-center px-5 py-[96px] sm:px-6 md:py-[130px]">
+  <section id="event-details" className="relative flex justify-center px-5 py-[96px] sm:px-6 md:py-[130px]">
     <div className="section-glow absolute inset-0 -z-10" />
 
     <div className="reveal relative w-full max-w-3xl">
