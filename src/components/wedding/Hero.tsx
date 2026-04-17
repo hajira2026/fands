@@ -11,8 +11,8 @@ const Hero = () => {
     duration: `${8 + (index % 5) * 1.6}s`,
   }));
 
-  const nameGlow = 0.22 + scrollProgress * 0.85;
-  const subGlow = 0.14 + scrollProgress * 0.36;
+  const nameGlow = 0.2 + scrollProgress * 0.9;
+  const subGlow = 0.12 + scrollProgress * 0.32;
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-16 sm:px-6">
@@ -23,8 +23,8 @@ const Hero = () => {
       <div className="hero-ambient-ribbon absolute -right-[18%] bottom-[18%] -z-20 h-44 w-[34rem] rotate-[8deg]" />
 
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="hero-arch-travel absolute inset-0 flex items-end justify-start">
-          <div className="hero-arch-shell w-[92vw] max-w-[62rem] px-4 sm:px-8">
+        <div className="hero-arch-travel absolute inset-0 flex items-center justify-center">
+          <div className="hero-arch-shell w-[94vw] max-w-[72rem] px-0 sm:px-4">
             <IslamicArch className="w-full" />
           </div>
         </div>
@@ -45,16 +45,8 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="reveal hero-card royal-border light-sweep relative z-10 mx-auto w-full max-w-5xl rounded-[2.25rem] px-5 py-10 text-center sm:px-10 sm:py-14 md:px-16 md:py-16">
-        <div className="hero-card-overlay absolute inset-0 rounded-[inherit]" />
-        <div className="hero-orb absolute left-10 top-10 h-24 w-24 rounded-full" />
-        <div className="hero-orb absolute bottom-10 right-10 h-28 w-28 rounded-full" />
-        <div className="hero-corner-flourish absolute left-6 top-6 h-14 w-14 sm:h-16 sm:w-16" />
-        <div className="hero-corner-flourish absolute right-6 top-6 h-14 w-14 rotate-90 sm:h-16 sm:w-16" />
-        <div className="hero-corner-flourish absolute bottom-6 left-6 h-14 w-14 -rotate-90 sm:h-16 sm:w-16" />
-        <div className="hero-corner-flourish absolute bottom-6 right-6 h-14 w-14 rotate-180 sm:h-16 sm:w-16" />
-
-        <div className="relative">
+      <div className="reveal relative z-10 mx-auto w-full max-w-5xl px-3 text-center sm:px-8">
+        <div className="hero-open-layout relative mx-auto max-w-4xl rounded-[2rem] px-3 py-8 sm:px-8 sm:py-12 md:px-12">
           <p className="font-arabic text-xl text-soft-gold text-glow-gold sm:text-2xl">
             بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
           </p>
@@ -66,7 +58,7 @@ const Hero = () => {
             With the blessings of Allah
           </p>
 
-          <p className="font-romantic mx-auto mt-5 max-w-2xl text-lg italic leading-relaxed text-[#f8efe1] sm:text-[1.55rem]">
+          <p className="font-romantic mx-auto mt-5 max-w-2xl text-lg italic leading-relaxed text-[#f8efe1] sm:text-[1.45rem]">
             An evening of sacred vows, royal elegance, and a love story wrapped in dua and barakah.
           </p>
 
@@ -105,13 +97,13 @@ const Hero = () => {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <a
               href="#invitation"
-              className="hero-action-primary min-w-[12.5rem] rounded-full px-7 py-3 text-[0.66rem] uppercase tracking-[0.34em] text-[#0f2825] transition-transform duration-500 hover:scale-[1.03]"
+              className="hero-action-primary hero-button min-w-[12.5rem] rounded-full px-7 py-3 text-[0.66rem] uppercase tracking-[0.34em] text-[#0f2825]"
             >
               Open Invitation
             </a>
             <a
               href="#event-details"
-              className="hero-action-secondary min-w-[12.5rem] rounded-full px-7 py-3 text-[0.66rem] uppercase tracking-[0.34em] text-[#f1dfbf] transition-transform duration-500 hover:scale-[1.03]"
+              className="hero-action-secondary hero-button min-w-[12.5rem] rounded-full px-7 py-3 text-[0.66rem] uppercase tracking-[0.34em] text-[#f1dfbf]"
             >
               View Ceremony
             </a>

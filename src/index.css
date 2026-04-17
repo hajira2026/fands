@@ -200,6 +200,40 @@
     box-shadow: inset 0 1px 0 rgba(255, 244, 206, 0.1);
   }
 
+  .hero-button {
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 260ms ease,
+      box-shadow 260ms ease,
+      border-color 260ms ease,
+      background-color 260ms ease;
+  }
+
+  .hero-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 20%, rgba(255, 247, 221, 0.34) 50%, transparent 80%);
+    transform: translateX(-130%);
+    opacity: 0;
+    transition: transform 650ms ease, opacity 260ms ease;
+    pointer-events: none;
+  }
+
+  .hero-button:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .hero-button:hover::after {
+    transform: translateX(130%);
+    opacity: 1;
+  }
+
+  .hero-open-layout {
+    background: radial-gradient(circle at center, rgba(247, 231, 184, 0.05), transparent 56%);
+  }
+
   .hero-name {
     transition: text-shadow 260ms ease, transform 260ms ease;
   }
@@ -212,18 +246,18 @@
   .hero-bottom-blend {
     pointer-events: none;
     background:
-      linear-gradient(180deg, rgba(11, 24, 22, 0) 0%, rgba(19, 56, 50, 0.66) 48%, rgba(30, 73, 65, 0.92) 100%),
+      linear-gradient(180deg, rgba(11, 24, 22, 0) 0%, rgba(24, 68, 61, 0.58) 48%, rgba(44, 100, 89, 0.88) 100%),
       radial-gradient(circle at 50% 0%, rgba(247, 231, 184, 0.14), transparent 42%);
     filter: blur(2px);
   }
 
   .hero-arch-shell {
-    opacity: 0.46;
-    filter: blur(0.5px) drop-shadow(0 0 34px rgba(231, 202, 135, 0.24));
+    opacity: 0.42;
+    filter: blur(0.4px) drop-shadow(0 0 28px rgba(231, 202, 135, 0.22));
   }
 
   .hero-arch-travel {
-    animation: diagonal-arch 16s ease-in-out infinite alternate;
+    animation: diagonal-arch 18s ease-in-out infinite alternate;
   }
 
   .invitation-entry {
@@ -418,13 +452,13 @@
   }
 
   .hero-arch-shell {
-    width: 130vw;
+    width: 122vw;
     max-width: none;
-    opacity: 0.38;
+    opacity: 0.34;
   }
 
   .hero-arch-travel {
-    animation-duration: 18s;
+    animation-duration: 20s;
   }
 }
 
