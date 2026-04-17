@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
 import { useScrollCamera } from "@/hooks/useScrollCamera";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-/** Wraps page content with a slow scroll-driven scale + tilt — the "virtual camera". */
 const CameraStage = ({ children }: { children: ReactNode }) => {
   const p = useScrollCamera();
-  // scale 1 → 1.04, tilt up to (1deg, 2deg)
-  const scale = 1 + p * 0.04;
-  const rotX = (p - 0.5) * 1.2;
-  const rotY = Math.sin(p * Math.PI) * 1.5;
+  const isMobile = useIsMobile();
+
+  const scale = 1 + p * (isMobile ? 0.012 : 0.04);
+  const rotX = isMobile ? 0 : (p - 0.5) * 1.2;
+  const rotY = isMobile ? Math.sin(p * Math.PI) * 0.45 : Math.sin(p * Math.PI) * 1.5;
 
   return (
     <div className="perspective-stage">
